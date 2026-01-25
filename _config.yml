@@ -1,0 +1,8 @@
+remote_theme: "mmistakes/minimal-mistakes"
+plugins:
+  - jekyll-remote-theme
+
+title: "Pranav Rao Balguri"
+description: "Analytical Engineer | SQL & Power BI"
+
+minimal_mistakes_skin: "dark"
