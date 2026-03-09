@@ -50,12 +50,33 @@ If your team has a data problem, I'll solve it.
 
 ### 🚀 Projects
 
-**🎱 UK Lottery Predictor**
-Data science project analysing UK National Lottery draws since 1994.
-Features frequency analysis, ML predictions, pair heatmaps and Monte Carlo simulation.
-Built with Python, Streamlit, scikit-learn and Plotly.
-
-[📂 View Code](https://github.com/PranavBalguri/PranavBalguri.github.io/tree/main/lottery-predictor)
+<div style="border:2px solid #f7c948;border-radius:12px;padding:24px;max-width:520px;margin:20px 0;background:#1a1a2e;">
+  <div style="font-size:28px;margin-bottom:8px;">🎱</div>
+  <h3 style="color:#f7c948;margin:0 0 8px 0;">UK Lottery Predictor</h3>
+  <p style="color:#ccc;font-size:14px;line-height:1.6;margin:0 0 14px 0;">
+    Data science project analysing UK National Lottery draws since 1994.
+    Features frequency analysis, ML predictions, pair heatmaps and Monte Carlo simulation.
+    Built with Python, Streamlit, scikit-learn and Plotly.
+  </p>
+  <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px;">
+    <span style="background:#2a2a4a;color:#3ae4c1;padding:3px 10px;border-radius:20px;font-size:12px;">Python</span>
+    <span style="background:#2a2a4a;color:#3ae4c1;padding:3px 10px;border-radius:20px;font-size:12px;">Streamlit</span>
+    <span style="background:#2a2a4a;color:#3ae4c1;padding:3px 10px;border-radius:20px;font-size:12px;">scikit-learn</span>
+    <span style="background:#2a2a4a;color:#3ae4c1;padding:3px 10px;border-radius:20px;font-size:12px;">Plotly</span>
+  </div>
+  <div style="display:flex;gap:12px;flex-wrap:wrap;">
+    <a href="https://github.com/PranavBalguri/PranavBalguri.github.io/tree/main/lottery-predictor"
+       target="_blank"
+       style="background:#f7c948;color:#1a1200;padding:8px 16px;border-radius:6px;text-decoration:none;font-size:13px;font-weight:bold;">
+      📂 View Code
+    </a>
+    <a href="https://lottreypredictorbypranav.streamlit.app/"
+       target="_blank"
+       style="border:2px solid #f7c948;color:#f7c948;padding:8px 16px;border-radius:6px;text-decoration:none;font-size:13px;font-weight:bold;">
+      🚀 Live Demo
+    </a>
+  </div>
+</div>
 
 ---
 
