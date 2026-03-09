@@ -2,11 +2,11 @@ title: "Pranav Rao Balguri"
 description: "Data Analytics Engineer | Snowflake · Power BI · Azure · SQL"
 theme: minima
 
-author:
-  name: Pranav Rao Balguri
-
 minima:
   skin: dark
+
+author:
+  name: "Pranav Rao Balguri"
 
 header_pages:
   - index.md
