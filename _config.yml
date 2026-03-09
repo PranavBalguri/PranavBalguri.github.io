@@ -1,20 +1,2 @@
-remote_theme: "mmistakes/minimal-mistakes"
-plugins:
-  - jekyll-remote-theme
-
 title: "Pranav Rao Balguri"
 description: "Data Analytics Engineer | Snowflake · Power BI · Azure · SQL"
-minimal_mistakes_skin: "dark"
-
-author:
-  name: "Pranav Rao Balguri"
-  bio: "Data Analytics Engineer building golden layer SQL models, Power BI semantic layers and MI pipelines. London, UK."
-  location: "London, UK"
-  email: "pranavrao01@gmail.com"
-  links:
-    - label: "LinkedIn"
-      icon: "fab fa-fw fa-linkedin"
-      url: "https://www.linkedin.com/in/pranavraobalguri"
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      url: "https://github.com/PranavBalguri"
