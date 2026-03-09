@@ -29,6 +29,6 @@ I design analytical data models and BI products that deliver trusted MI in minut
   </div>
   <div style="display:flex;gap:12px;">
     <a href="https://github.com/PranavBalguri/PranavBalguri.github.io/tree/main/lottery-predictor" target="_blank" style="background:#f7c948;color:#1a1200;padding:8px 18px;border-radius:8px;text-decoration:none;font-size:13px;font-weight:bold;">📂 View Code</a>
-    <a href="YOUR_STREAMLIT_URL" target="_blank" style="border:1px solid #f7c948;color:#f7c948;padding:8px 18px;border-radius:8px;text-decoration:none;font-size:13px;">🚀 Live Demo</a>
+    <a href="https://lottreypredictorbypranav.streamlit.app/" target="_blank" style="border:1px solid #f7c948;color:#f7c948;padding:8px 18px;border-radius:8px;text-decoration:none;font-size:13px;">🚀 Live Demo</a>
   </div>
 </div>
