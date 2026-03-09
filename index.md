@@ -1,6 +1,6 @@
 ---
-layout: home
-title: "Analytical Engineer"
+layout: default
+title: "Pranav Rao Balguri — Analytical Engineer"
 ---
 
 I design analytical data models and BI products that deliver trusted MI in minutes — not hours.
