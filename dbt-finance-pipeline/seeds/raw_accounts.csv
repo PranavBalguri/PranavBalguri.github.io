@@ -1,0 +1,11 @@
+account_id,customer_name,account_type,account_status,opened_date,credit_limit,risk_tier,relationship_manager,country
+ACC-101,Sarah Johnson,current,active,2019-03-15,5000,low,James Mitchell,UK
+ACC-102,Mohammed Al-Rashid,current,active,2021-07-22,3000,low,Emma Clarke,UK
+ACC-103,Priya Sharma,investment,active,2018-11-08,500000,medium,James Mitchell,UK
+ACC-104,Unknown Entity,current,flagged,2023-12-01,10000,high,Compliance Team,UK
+ACC-105,David Okonkwo,mortgage,active,2017-06-30,350000,low,Emma Clarke,UK
+ACC-106,Chen Wei,current,active,2020-02-14,8000,low,James Mitchell,UK
+ACC-107,Fatima Hassan,current,active,2022-09-19,12000,medium,Emma Clarke,UK
+ACC-108,Robert Campbell,savings,active,2016-04-25,2000,low,James Mitchell,UK
+ACC-109,Anika Patel,investment,active,2020-08-11,250000,medium,Emma Clarke,UK
+ACC-110,Thomas Brennan,current,active,2023-03-07,4000,low,James Mitchell,UK
