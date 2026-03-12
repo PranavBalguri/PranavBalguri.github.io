@@ -1,0 +1,12 @@
+# ~/.dbt/profiles.yml
+# Save this file to your home directory under a folder called .dbt
+# On Windows: C:\Users\YourName\.dbt\profiles.yml
+# On Mac/Linux: ~/.dbt/profiles.yml
+
+dbt_finance_pipeline:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: ./finance.duckdb   # Creates a local database file — no cloud needed!
+      threads: 4
