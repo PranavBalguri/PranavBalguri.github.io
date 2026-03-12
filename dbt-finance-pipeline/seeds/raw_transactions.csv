@@ -1,0 +1,41 @@
+transaction_id,account_id,transaction_date,amount,transaction_type,status,product_category,business_line,description
+TXN-0001,ACC-101,2024-01-03,1500.00,credit,completed,savings,retail_banking,Salary deposit
+TXN-0002,ACC-102,2024-01-03,-200.00,debit,completed,current,retail_banking,ATM withdrawal
+TXN-0003,ACC-103,2024-01-04,50000.00,credit,completed,investment,wealth_management,Bond purchase
+TXN-0004,ACC-101,2024-01-05,-75.50,debit,completed,current,retail_banking,Utility bill
+TXN-0005,ACC-104,2024-01-05,9999.99,credit,pending,current,retail_banking,Wire transfer in
+TXN-0006,ACC-105,2024-01-06,-3200.00,debit,completed,mortgage,lending,Mortgage payment
+TXN-0007,ACC-102,2024-01-07,450.00,credit,completed,current,retail_banking,Freelance payment
+TXN-0008,ACC-106,2024-01-08,125000.00,credit,completed,investment,wealth_management,Portfolio top-up
+TXN-0009,ACC-103,2024-01-08,-500.00,debit,failed,current,retail_banking,Declined payment
+TXN-0010,ACC-107,2024-01-09,8500.00,credit,completed,current,retail_banking,Business revenue
+TXN-0011,ACC-101,2024-01-10,-1200.00,debit,completed,current,retail_banking,Rent payment
+TXN-0012,ACC-104,2024-01-10,9800.00,credit,pending,current,retail_banking,Suspicious transfer
+TXN-0013,ACC-108,2024-01-11,2300.00,credit,completed,savings,retail_banking,Monthly savings
+TXN-0014,ACC-105,2024-01-12,-150.00,debit,completed,current,retail_banking,Insurance premium
+TXN-0015,ACC-106,2024-01-13,5000.00,credit,completed,current,retail_banking,Client payment
+TXN-0016,ACC-109,2024-01-14,75000.00,credit,completed,investment,wealth_management,ISA contribution
+TXN-0017,ACC-102,2024-01-15,-890.00,debit,completed,current,retail_banking,Online shopping
+TXN-0018,ACC-104,2024-01-15,9750.00,credit,flagged,current,retail_banking,High value transfer
+TXN-0019,ACC-110,2024-01-16,320.00,credit,completed,current,retail_banking,Refund received
+TXN-0020,ACC-101,2024-01-17,-45.00,debit,completed,current,retail_banking,Subscription
+TXN-0021,ACC-107,2024-01-18,12000.00,credit,completed,current,retail_banking,Invoice payment
+TXN-0022,ACC-103,2024-01-19,-2500.00,debit,completed,investment,wealth_management,Fund withdrawal
+TXN-0023,ACC-108,2024-01-20,180.00,credit,completed,current,retail_banking,Interest earned
+TXN-0024,ACC-104,2024-01-20,9900.00,credit,flagged,current,retail_banking,Repeated high transfer
+TXN-0025,ACC-105,2024-01-21,-4800.00,debit,completed,mortgage,lending,Overpayment
+TXN-0026,ACC-106,2024-01-22,1750.00,credit,completed,current,retail_banking,Consulting fee
+TXN-0027,ACC-109,2024-01-23,-300.00,debit,completed,current,retail_banking,Travel expenses
+TXN-0028,ACC-110,2024-01-24,550.00,credit,completed,savings,retail_banking,Bonus received
+TXN-0029,ACC-101,2024-01-25,-680.00,debit,completed,current,retail_banking,Groceries
+TXN-0030,ACC-102,2024-01-26,3400.00,credit,completed,current,retail_banking,Payroll
+TXN-0031,ACC-104,2024-01-27,9500.00,credit,flagged,current,retail_banking,Structuring pattern
+TXN-0032,ACC-107,2024-01-28,-1500.00,debit,completed,current,retail_banking,Equipment purchase
+TXN-0033,ACC-108,2024-01-29,4200.00,credit,completed,savings,retail_banking,Deposit
+TXN-0034,ACC-103,2024-01-30,88000.00,credit,completed,investment,wealth_management,Annual bonus invested
+TXN-0035,ACC-105,2024-01-31,-200.00,debit,completed,current,retail_banking,Phone bill
+TXN-0036,ACC-101,2024-02-01,1500.00,credit,completed,savings,retail_banking,Salary deposit
+TXN-0037,ACC-106,2024-02-02,6200.00,credit,completed,current,retail_banking,Project payment
+TXN-0038,ACC-109,2024-02-03,-12000.00,debit,completed,investment,wealth_management,Portfolio rebalance
+TXN-0039,ACC-110,2024-02-04,900.00,credit,completed,current,retail_banking,Freelance
+TXN-0040,ACC-102,2024-02-05,-430.00,debit,completed,current,retail_banking,Dining and entertainment
