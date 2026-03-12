@@ -1,0 +1,95 @@
+version: 2
+
+models:
+  - name: stg_transactions
+    description: "Cleaned and standardised financial transactions from the raw source system."
+    columns:
+      - name: transaction_id
+        description: "Unique identifier for each transaction"
+        tests:
+          - unique
+          - not_null
+      - name: account_id
+        description: "Foreign key to accounts"
+        tests:
+          - not_null
+      - name: amount
+        description: "Transaction amount — positive for credits, negative for debits"
+        tests:
+          - not_null
+      - name: transaction_type
+        description: "Type of transaction"
+        tests:
+          - accepted_values:
+              values: ['credit', 'debit']
+      - name: status
+        description: "Settlement status of the transaction"
+        tests:
+          - accepted_values:
+              values: ['completed', 'pending', 'failed', 'flagged']
+      - name: flow_direction
+        description: "Whether money is flowing in or out"
+        tests:
+          - accepted_values:
+              values: ['inflow', 'outflow']
+
+  - name: stg_accounts
+    description: "Cleaned account master data with risk classification."
+    columns:
+      - name: account_id
+        description: "Unique account identifier"
+        tests:
+          - unique
+          - not_null
+      - name: account_status
+        description: "Current status of the account"
+        tests:
+          - accepted_values:
+              values: ['active', 'flagged', 'closed', 'suspended']
+      - name: risk_tier
+        description: "Risk classification assigned by compliance"
+        tests:
+          - accepted_values:
+              values: ['low', 'medium', 'high']
+
+  - name: fct_daily_pnl
+    description: >
+      Daily P&L fact table aggregated by business line and product category.
+      Only includes completed/settled transactions. Used for executive MI reporting.
+    columns:
+      - name: transaction_date
+        description: "The settlement date"
+        tests:
+          - not_null
+      - name: business_line
+        description: "The business unit generating the revenue"
+        tests:
+          - not_null
+      - name: estimated_revenue
+        description: "Fee/interest revenue estimate for the day"
+        tests:
+          - not_null
+
+  - name: fct_fraud_indicators
+    description: >
+      Account-level fraud risk scoring model using rule-based logic.
+      Scores range 0–100. Accounts scoring 60+ are referred to the Fraud Team.
+    columns:
+      - name: account_id
+        description: "Unique account identifier"
+        tests:
+          - unique
+          - not_null
+      - name: fraud_risk_score
+        description: "Composite fraud risk score 0–100"
+        tests:
+          - not_null
+
+  - name: dim_accounts
+    description: "Account dimension enriched with lifetime transaction statistics."
+    columns:
+      - name: account_id
+        description: "Unique account identifier"
+        tests:
+          - unique
+          - not_null
