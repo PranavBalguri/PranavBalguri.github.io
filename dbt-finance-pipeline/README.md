@@ -1,22 +1,33 @@
 # 💰 Financial Reporting Pipeline — dbt + DuckDB + Streamlit
 
 A production-style analytics engineering project modelling financial transactions,
-P&L reporting, and fraud risk indicators — built with **dbt Core**, **DuckDB**, and **Streamlit**.
+P&L reporting, and fraud risk indicators. Built with **dbt Core**, **DuckDB**, and **Streamlit**.
+
+---
+
+## 🌐 Live Dashboard
+
+👉 **[View the live Streamlit dashboard here](https://your-app.streamlit.app)**
+
+No setup needed, just open the link and explore the data directly in your browser.
 
 ---
 
 ## 🏗️ Project Overview
 
-This pipeline transforms raw financial transaction data into clean, reliable
-reporting layers used by finance and risk teams — with an interactive Streamlit
-dashboard to visualise the results.
+This project has two layers:
+
+| Layer | Tool | Purpose |
+|---|---|---|
+| **Data Pipeline** | dbt Core + DuckDB | Transforms raw CSV data into clean reporting marts locally |
+| **Dashboard** | Streamlit + Plotly | Visualises the pipeline outputs which are deployed on Streamlit Cloud |
 
 ```
 Raw Data (CSV seeds)
     └── Staging Layer       → cleaned, typed, renamed
         └── Intermediate    → business logic, joins
-            └── Marts       → final reporting tables (P&L, fraud risk, KPIs)
-                └── Dashboard (Streamlit) → interactive visualisations
+            └── Marts       → P&L, fraud risk, accounts
+                └── Streamlit Dashboard → live at streamlit.app
 ```
 
 ### Models Built
@@ -32,26 +43,47 @@ Raw Data (CSV seeds)
 
 ---
 
-## 🚀 Setup Instructions (From Zero)
+## 📊 Dashboard Features
+
+The Streamlit dashboard (`dashboard.py`) is deployed on Streamlit Cloud and
+works without any local setup. It mirrors the logic from the dbt marts exactly.
+
+| Tab | What it shows |
+|---|---|
+| 📈 P&L Analysis | Daily revenue by business line, inflow/outflow chart, full P&L table |
+| 🚨 Fraud Risk | Risk score bar chart, colour-coded account risk table |
+| 👤 Accounts | Account age vs volume scatter, engagement tier breakdown |
+| 📋 Raw Transactions | Filterable transaction table by status, business line, direction |
+
+---
+
+## 🖥️ Run the dbt Pipeline Locally
+
+Want to run the full pipeline with the lineage graph? Follow these steps.
 
 ### Step 1 — Install Python 3.11
 
-1. Go to https://www.python.org/ftp/python/3.11.9/python-3.11.9-amd64.exe (Windows)
-2. Run the installer — **tick "Add Python to PATH"** before clicking Install
-3. Verify:
-```bash
-python --version
+Download from:
+```
+https://www.python.org/ftp/python/3.11.9/python-3.11.9-amd64.exe
 ```
 
 > ⚠️ Use Python 3.11 — dbt is not yet compatible with Python 3.13+
 
-### Step 2 — Install dependencies
+During install — tick ✅ **"Add Python to PATH"**
+
+### Step 2 — Install dbt + DuckDB
 
 ```bash
-pip install dbt-core dbt-duckdb streamlit plotly pandas
+pip install dbt-core dbt-duckdb
 ```
 
-### Step 3 — Clone this project
+Verify:
+```bash
+dbt --version
+```
+
+### Step 3 — Clone this repo
 
 ```bash
 git clone https://github.com/PranavBalguri/PranavBalguri.github.io.git
@@ -60,7 +92,7 @@ cd PranavBalguri.github.io/dbt-finance-pipeline
 
 ### Step 4 — Set up your dbt profile
 
-Create `~/.dbt/profiles.yml`:
+Create a file at `~/.dbt/profiles.yml`:
 
 ```yaml
 dbt_finance_pipeline:
@@ -71,62 +103,35 @@ dbt_finance_pipeline:
       path: ./finance.duckdb
 ```
 
-### Step 5 — Run the dbt pipeline
+### Step 5 — Run the pipeline
 
 ```bash
 # Load seed data
 dbt seed --profiles-dir .
 
-# Run all models
+# Build all models
 dbt run --profiles-dir .
 
-# Run data quality tests
+# Run 20 data quality tests
 dbt test --profiles-dir .
+```
 
-# View lineage graph
+### Step 6 — View the lineage graph
+
+```bash
 dbt docs generate --profiles-dir .
 dbt docs serve --profiles-dir .
 ```
 
-Open http://localhost:8080 to see your full data lineage graph!
-
-### Step 6 — Launch the Streamlit dashboard
-
-```bash
-streamlit run dashboard.py
-```
-
-Open http://localhost:8501 to see the interactive dashboard!
-
----
-
-## 📊 Dashboard Features
-
-The Streamlit dashboard (`dashboard.py`) reads directly from the live DuckDB
-database and provides 4 interactive tabs:
-
-| Tab | What it shows |
-|---|---|
-| 📈 P&L Analysis | Daily revenue by business line, inflow/outflow donut chart, full P&L table |
-| 🚨 Fraud Risk | Risk score bar chart, colour-coded account risk table, HIGH/MEDIUM/LOW summary |
-| 👤 Accounts | Scatter plot of account age vs volume, engagement tier breakdown |
-| 📋 Raw Transactions | Filterable transaction table by status, business line, and direction |
-
-### Key Metrics
-
-- **Total volume** — sum of all transaction values
-- **Estimated revenue** — fee/interest model per business line
-- **Fraud risk scores** — rule-based 0–100 scoring per account
-- **Month-to-date P&L** — cumulative revenue using window functions
+Open **http://localhost:8080** to see the full data lineage graph.
 
 ---
 
 ## 🧪 Data Quality Tests (20 passing)
 
-- Not null checks on all key fields
-- Unique checks on transaction IDs and account IDs
-- Accepted value checks on transaction types and status
-- Custom test: fraud score must be between 0 and 100
+- Unique and not null checks on all key fields
+- Accepted value checks on transaction types and statuses
+- Custom test: fraud score must always be between 0 and 100
 
 ---
 
@@ -136,11 +141,11 @@ database and provides 4 interactive tabs:
 |---|---|
 | dbt Core | Transformation, testing, documentation |
 | DuckDB | Local analytical database (free, no cloud needed) |
-| Streamlit | Interactive dashboard |
+| Streamlit | Interactive dashboard — deployed on Streamlit Cloud |
 | Plotly | Charts and visualisations |
-| Python | Runtime |
+| Python | Runtime for dbt and Streamlit |
 | SQL | All transformation logic |
-| Git | Version control |
+| Git + GitHub | Version control and hosting |
 
 ---
 
@@ -149,14 +154,32 @@ database and provides 4 interactive tabs:
 ```
 dbt-finance-pipeline/
 ├── models/
-│   ├── staging/          # Raw → clean
-│   ├── intermediate/     # Business logic
-│   └── marts/            # Final reporting tables
-├── seeds/                # Source CSV data
-├── tests/                # Custom data quality tests
-├── macros/               # Reusable SQL macros
-├── dashboard.py          # Streamlit dashboard
-├── requirements.txt      # Python dependencies
-├── dbt_project.yml       # dbt config
+│   ├── staging/               # Raw → clean
+│   ├── intermediate/          # Business logic + joins
+│   └── marts/                 # Final reporting tables
+├── seeds/                     # Source CSV data
+├── tests/                     # Custom data quality tests
+├── macros/                    # Reusable SQL macros
+├── dashboard.py               # Streamlit dashboard (Streamlit Cloud)
+├── requirements.txt           # Streamlit Cloud dependencies
+├── dbt_project.yml            # dbt config
 └── README.md
 ```
+
+---
+
+## 💡 Design Decisions
+
+**Why DuckDB locally but not in the dashboard?**
+
+DuckDB is perfect for running dbt pipelines locally as it's fast, free, and
+requires no setup. However, Streamlit Cloud doesn't persist files between
+sessions, so the dashboard replicates the mart logic directly in Python/Pandas.
+This mirrors a real-world pattern where a data pipeline runs on a schedule and
+a separate BI layer reads from it.
+
+**Why rule-based fraud scoring?**
+
+The fraud scoring model is intentionally rule-based to reflect how fraud teams
+actually work in insurance and banking as explainable rules that compliance teams
+can audit, rather than a black-box ML model.
