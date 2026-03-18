@@ -1,8 +1,8 @@
-# 🇬🇧 UK Insurance Group — FY Results Dashboard
+# GB UK Insurance Group - FY Results Dashboard
 
-An analyst-built dashboard tracking FY2022–FY2024 financial results for five major UK insurance groups.
+An dashboard built for tracking FY2022–FY2024 financial results for five major UK insurance groups.
 
-**Live app →** *(add your Streamlit Cloud URL here after deployment)*
+**Live app →** *(https://github.com/PranavBalguri/PranavBalguri.github.io)*
 
 ---
 
@@ -72,7 +72,7 @@ uk-insurance-results/
 ## Local Setup (optional)
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/uk-insurance-results
+git clone https://github.com/PranavBalguri/uk-insurance-results
 cd uk-insurance-results
 pip install -r requirements.txt
 streamlit run app.py
