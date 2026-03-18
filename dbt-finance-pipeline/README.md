@@ -7,7 +7,7 @@ P&L reporting, and fraud risk indicators. Built with **dbt Core**, **DuckDB**, a
 
 ## 🌐 Live Dashboard
 
-👉 **[View the live Streamlit dashboard here](https://your-app.streamlit.app)**
+👉 **[View the live Streamlit dashboard here](https://pranavbalguri-pranavbalgur-dbt-finance-pipelinedashboard-hgrdij.streamlit.app/)**
 
 No setup needed, just open the link and explore the data directly in your browser.
 
