@@ -145,7 +145,7 @@ st.caption(
 st.divider()
 
 # ── Tab layout ────────────────────────────────────────────────────────────────
-tab_snapshot, tab_trends, tab_table, tab_sources = st.tabs([
+tab_snapshot, tab_trends, tab_table, tab_sources, tab_about = st.tabs([
     "📌 Snapshot",
     "📈 3-Year Trends",
     "🗂 Full Table",
