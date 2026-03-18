@@ -2,7 +2,7 @@
 
 An dashboard built for tracking FY2022–FY2024 financial results for five major UK insurance groups.
 
-**Live app →** *(https://github.com/PranavBalguri/PranavBalguri.github.io)*
+**Live app →** *(https://pranavbalguriappio-5dpim4qvrt8jnzwf8trdxh.streamlit.app/)*
 
 ---
 
