@@ -1,0 +1,32 @@
+{
+  "Admiral Group": {
+    "status": "current",
+    "last_known_period": "FY2024",
+    "last_checked": "2025-03-18",
+    "alert_message": ""
+  },
+  "Aviva": {
+    "status": "current",
+    "last_known_period": "FY2024",
+    "last_checked": "2025-03-18",
+    "alert_message": ""
+  },
+  "Allianz UK": {
+    "status": "current",
+    "last_known_period": "FY2024",
+    "last_checked": "2025-03-18",
+    "alert_message": ""
+  },
+  "Ageas": {
+    "status": "current",
+    "last_known_period": "FY2024",
+    "last_checked": "2025-03-18",
+    "alert_message": ""
+  },
+  "Sabre Insurance": {
+    "status": "current",
+    "last_known_period": "FY2024",
+    "last_checked": "2025-03-18",
+    "alert_message": ""
+  }
+}
