@@ -1,6 +1,5 @@
 """
 app.py — UK Insurance Group FY Results Dashboard
-Clean, credible, CFO-ready. Minimal but complete.
 """
 
 import json
@@ -151,6 +150,7 @@ tab_snapshot, tab_trends, tab_table, tab_sources = st.tabs([
     "📈 3-Year Trends",
     "🗂 Full Table",
     "🔗 Sources",
+    "ℹ️ About",
 ])
 
 # ═══════════════════════════════════════════════════════════════════════════════
@@ -368,5 +368,55 @@ with tab_sources:
     st.info(NOTE_IFRS17, icon="ℹ️")
     st.caption(
         "Dashboard auto-refreshes when data/results.py is updated on GitHub. "
-        "For questions contact the analyst who built this dashboard."
+        "For questions contact Pranav Balguri."
     )
+# ═══════════════════════════════════════════════════════════════════════════════
+# TAB 5 — ABOUT
+# ═══════════════════════════════════════════════════════════════════════════════
+with tab_about:
+
+    st.markdown("<p class='section-title'>About this dashboard</p>",
+                unsafe_allow_html=True)
+
+    st.markdown("""
+    This dashboard tracks FY2022–FY2024 financial results for five major
+    UK insurance groups, built for peer benchmarking and trend analysis.
+    """)
+
+    st.divider()
+
+    col1, col2 = st.columns(2)
+
+    with col1:
+        st.markdown("**Companies covered**")
+        for co in COMPANIES:
+            st.markdown(f"- {co['company']} — `{co['ticker']}`")
+
+    with col2:
+        st.markdown("**KPIs tracked**")
+        st.markdown("""
+        - Revenue / GWP / Inflows (£bn)
+        - Profit — PBT / Operating / NOR (£m)
+        - Combined Operating Ratio (%)
+        - Solvency II ratio (%)
+        """)
+
+    st.divider()
+
+    st.markdown("**Data & Sources**")
+    st.markdown("""
+    All figures sourced directly from official company investor relations
+    press releases or RNS regulatory filings. No third-party data vendors.
+    No estimates. Every number links to its original document in the
+    **Sources** tab.
+    """)
+
+    st.info(NOTE_IFRS17, icon="ℹ️")
+
+    st.divider()
+
+    st.markdown("**Built by**")
+    st.markdown("""
+    Pranav Balguri — Data Analytics Engineer  
+    [GitHub →](https://github.com/PranavBalguri)
+    """)
