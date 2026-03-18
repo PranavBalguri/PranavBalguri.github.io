@@ -135,7 +135,7 @@ color_map = {c["company"]: c["color"] for c in COMPANIES}
 show_alerts()
 
 # ── Header ────────────────────────────────────────────────────────────────────
-st.title("GB UK Insurance — Group Results Dashboard")
+st.title("GB UK Insurance - Group Results Dashboard")
 st.caption(
     f"**Showing:** {LATEST_PERIOD} latest  |  "
     f"**3-year trend:** FY2022 – FY2024  |  "
