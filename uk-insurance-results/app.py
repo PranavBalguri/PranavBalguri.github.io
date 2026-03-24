@@ -138,7 +138,7 @@ show_alerts()
 st.title("GB UK Insurance - Group Results Dashboard")
 st.caption(
     f"**Showing:** {LATEST_PERIOD} latest  |  "
-    f"**3-year trend:** FY2022 – FY2024  |  "
+    f"**4-year trend:** FY2022 – FY2025  |  "
     f"**Last updated:** {LAST_UPDATED}  |  "
     f"Source: Official company IR press releases"
 )
@@ -147,7 +147,7 @@ st.divider()
 # ── Tab layout ────────────────────────────────────────────────────────────────
 tab_snapshot, tab_trends, tab_table, tab_sources, tab_about = st.tabs([
     "📌 Snapshot",
-    "📈 3-Year Trends",
+    "📈 Trends",
     "🗂 Full Table",
     "🔗 Sources",
     "ℹ️ About",
@@ -182,7 +182,7 @@ with tab_snapshot:
     col1, col2 = st.columns(2)
 
     with col1:
-        st.markdown("<p class='section-title'>Revenue / GWP / Inflows — FY2024 (£bn)</p>", unsafe_allow_html=True)
+        st.markdown(f"<p class='section-title'>Revenue / GWP / Inflows — {LATEST_PERIOD} (£bn)</p>", unsafe_allow_html=True)
         fig = px.bar(
             df_latest.sort_values("Revenue (£bn)", ascending=True),
             x="Revenue (£bn)",
@@ -204,7 +204,7 @@ with tab_snapshot:
         st.plotly_chart(fig, use_container_width=True)
 
     with col2:
-        st.markdown("<p class='section-title'>Combined Operating Ratio — FY2024 (lower = better)</p>", unsafe_allow_html=True)
+        st.markdown(f"<p class='section-title'>Combined Operating Ratio — {LATEST_PERIOD} (lower = better)</p>", unsafe_allow_html=True)
         df_cor = df_latest[df_latest["COR (%)"].notna()].sort_values("COR (%)")
         fig2 = px.bar(
             df_cor,
@@ -235,11 +235,11 @@ with tab_snapshot:
 
 
 # ═══════════════════════════════════════════════════════════════════════════════
-# TAB 2 — 3-YEAR TRENDS
+# TAB 2 — TRENDS
 # ═══════════════════════════════════════════════════════════════════════════════
 with tab_trends:
 
-    st.markdown("<p class='section-title'>Revenue / GWP / Inflows (£bn) — FY2022 to FY2024</p>", unsafe_allow_html=True)
+    st.markdown("<p class='section-title'>Revenue / GWP / Inflows (£bn) — FY2022 to FY2025</p>", unsafe_allow_html=True)
 
     fig3 = px.line(
         df,
@@ -261,7 +261,7 @@ with tab_trends:
     )
     st.plotly_chart(fig3, use_container_width=True)
 
-    st.markdown("<p class='section-title'>Profit (£m) — FY2022 to FY2024</p>", unsafe_allow_html=True)
+    st.markdown("<p class='section-title'>Profit (£m) — FY2022 to FY2025</p>", unsafe_allow_html=True)
     st.caption("Admiral & Sabre = PBT · Aviva & Allianz = Operating Profit · Ageas = Net Operating Result (GBP equivalent)")
 
     fig4 = px.bar(
@@ -282,7 +282,7 @@ with tab_trends:
     )
     st.plotly_chart(fig4, use_container_width=True)
 
-    st.markdown("<p class='section-title'>Combined Operating Ratio (%) — FY2022 to FY2024</p>", unsafe_allow_html=True)
+    st.markdown("<p class='section-title'>Combined Operating Ratio (%) — FY2022 to FY2025</p>", unsafe_allow_html=True)
     st.caption("Allianz UK not solvency-rated (subsidiary). Admiral COR not separately disclosed at group level.")
 
     df_cor_trend = df[df["COR (%)"].notna()].copy()
@@ -315,7 +315,7 @@ with tab_trends:
 # ═══════════════════════════════════════════════════════════════════════════════
 with tab_table:
 
-    st.markdown("<p class='section-title'>All figures — FY2022 to FY2024</p>", unsafe_allow_html=True)
+    st.markdown("<p class='section-title'>All figures — FY2022 to FY2025</p>", unsafe_allow_html=True)
 
     display = df[[
         "Company", "Year", "Revenue (£bn)", "Profit Label",
@@ -335,7 +335,7 @@ with tab_table:
         display.rename(columns={"Profit Label": "Profit Metric"}),
         use_container_width=True,
         hide_index=True,
-        height=460,
+        height=520,
     )
 
     st.caption(
@@ -370,6 +370,7 @@ with tab_sources:
         "Dashboard auto-refreshes when data/results.py is updated on GitHub. "
         "For questions contact Pranav Balguri."
     )
+
 # ═══════════════════════════════════════════════════════════════════════════════
 # TAB 5 — ABOUT
 # ═══════════════════════════════════════════════════════════════════════════════
@@ -379,7 +380,7 @@ with tab_about:
                 unsafe_allow_html=True)
 
     st.markdown("""
-    This dashboard tracks FY2022–FY2024 financial results for five major
+    This dashboard tracks FY2022–FY2025 financial results for five major
     UK insurance groups, built for peer benchmarking and trend analysis.
     """)
 
