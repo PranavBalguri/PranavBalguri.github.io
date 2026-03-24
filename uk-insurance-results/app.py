@@ -249,6 +249,7 @@ with tab_trends:
         color_discrete_map=color_map,
         markers=True,
         line_shape="linear",
+        category_orders={"Year": years},
     )
     fig3.update_traces(line_width=2.5, marker_size=8)
     fig3.update_layout(
@@ -271,6 +272,7 @@ with tab_trends:
         color="Company",
         barmode="group",
         color_discrete_map=color_map,
+        category_orders={"Year": years},
     )
     fig4.update_layout(
         plot_bgcolor="white",
@@ -293,6 +295,7 @@ with tab_trends:
         color="Company",
         color_discrete_map=color_map,
         markers=True,
+        category_orders={"Year": years},
     )
     fig5.add_hline(y=100, line_dash="dash", line_color="#adb5bd",
                    annotation_text="100% = breakeven")
@@ -320,7 +323,7 @@ with tab_table:
     display = df[[
         "Company", "Year", "Revenue (£bn)", "Profit Label",
         "Profit (£m)", "COR (%)", "Solvency (%)", "Results Date"
-    ]].copy()
+    ]].sort_values(["Year", "Company"]).copy()
 
     display["Revenue (£bn)"] = display["Revenue (£bn)"].apply(lambda x: f"£{x:.2f}bn")
     display["Profit (£m)"]   = display["Profit (£m)"].apply(lambda x: f"£{x:,.0f}m")
