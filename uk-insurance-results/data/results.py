@@ -1,6 +1,6 @@
 # data/results.py
 # ─────────────────────────────────────────────────────────────────────────────
-# UK Insurance Group — FY Results Data (FY2022 to FY2024)
+# UK Insurance Group - FY Results Data (FY2022 to FY2025)
 #
 # HOW TO UPDATE:
 #   1. When new results are published, update the relevant company block below
@@ -17,8 +17,8 @@
 #   Sabre    → https://sabreplc.co.uk/investors/results-centre/
 # ─────────────────────────────────────────────────────────────────────────────
 
-LAST_UPDATED  = "March 2025"
-LATEST_PERIOD = "FY2024"
+LAST_UPDATED  = "March 2026"
+LATEST_PERIOD = "FY2025"
 NOTE_IFRS17   = (
     "⚠️  Aviva and Ageas adopted IFRS 17 in 2023 (restating FY2022). "
     "Allianz UK adopted IFRS 9 & 17 in 2023. FY2022 figures reflect restated "
@@ -50,6 +50,17 @@ COMPANIES = [
         "currency" : "GBP",
         "color"    : "#E63946",
         "history"  : [
+            {
+                "year"         : "FY2025",
+                "revenue_bn"   : 5.90,
+                "profit_m"     : 957.9,
+                "profit_label" : "Profit Before Tax",
+                "cor_pct"      : None,
+                "solvency_pct" : 193.0,
+                "source_url"   : "https://www.admiralgroup.co.uk/news-releases/news-release-details/admiral-group-plc-full-year-2025-results",
+                "source_label" : "Admiral FY2025 Press Release — 5 Mar 2026",
+                "results_date" : "5 Mar 2026",
+            },
             {
                 "year"         : "FY2024",
                 "revenue_bn"   : 6.15,
@@ -94,6 +105,17 @@ COMPANIES = [
         "color"    : "#2A9D8F",
         "history"  : [
             {
+                "year"         : "FY2025",
+                "revenue_bn"   : 24.4,       # ⚠️ verify total revenue line in full PDF — GI premiums alone were £14.1bn
+                "profit_m"     : 2203.0,
+                "profit_label" : "Group Operating Profit",
+                "cor_pct"      : 94.6,
+                "solvency_pct" : 180.0,
+                "source_url"   : "https://www.aviva.com/newsroom/news-releases/2026/03/full-year-2025-results-announcement/",
+                "source_label" : "Aviva FY2025 Results Announcement — 5 Mar 2026",
+                "results_date" : "5 Mar 2026",
+            },
+            {
                 "year"         : "FY2024",
                 "revenue_bn"   : 20.7,
                 "profit_m"     : 1767.0,
@@ -136,6 +158,17 @@ COMPANIES = [
         "currency" : "GBP",
         "color"    : "#E9C46A",
         "history"  : [
+            {
+                "year"         : "FY2025",
+                "revenue_bn"   : 4.83,       # ⚠️ verify from press release — total UK group revenue £7.3bn includes Trade/Partners
+                "profit_m"     : 476.2,
+                "profit_label" : "Operating Profit",
+                "cor_pct"      : 93.0,
+                "solvency_pct" : None,
+                "source_url"   : "https://www.allianz.co.uk/news-and-insight/news/allianz-deliver-strong-full-year-2025-performance-in-the-uk.html",
+                "source_label" : "Allianz UK FY2025 Press Release — Mar 2026",
+                "results_date" : "Mar 2026",
+            },
             {
                 "year"         : "FY2024",
                 "revenue_bn"   : 4.66,
@@ -180,9 +213,20 @@ COMPANIES = [
         "color"    : "#457B9D",
         "history"  : [
             {
+                "year"         : "FY2025",
+                "revenue_bn"   : 16.7,       # €19.6bn inflows × 0.85
+                "profit_m"     : 1406.8,     # €1.655bn × 0.85
+                "profit_label" : "Net Operating Result",
+                "cor_pct"      : 92.5,
+                "solvency_pct" : 211.0,
+                "source_url"   : "https://www.ageas.com/en/newsroom/ageas-reports-full-year-2025-results",
+                "source_label" : "Ageas FY2025 Press Release — 25 Feb 2026",
+                "results_date" : "25 Feb 2026",
+            },
+            {
                 "year"         : "FY2024",
                 "revenue_bn"   : 15.3,
-                "profit_m"     : 1054.0,   # €1.24bn × 0.85
+                "profit_m"     : 1054.0,     # €1.24bn × 0.85
                 "profit_label" : "Net Operating Result",
                 "cor_pct"      : 93.3,
                 "solvency_pct" : 218.0,
@@ -192,8 +236,8 @@ COMPANIES = [
             },
             {
                 "year"         : "FY2023",
-                "revenue_bn"   : 14.5,     # €17.1bn × 0.85
-                "profit_m"     : 991.1,    # €1.166bn × 0.85
+                "revenue_bn"   : 14.5,       # €17.1bn × 0.85
+                "profit_m"     : 991.1,      # €1.166bn × 0.85
                 "profit_label" : "Net Operating Result",
                 "cor_pct"      : 93.3,
                 "solvency_pct" : 217.0,
@@ -203,8 +247,8 @@ COMPANIES = [
             },
             {
                 "year"         : "FY2022",
-                "revenue_bn"   : 13.3,     # approx €15.6bn × 0.85
-                "profit_m"     : 884.0,    # approx €1.04bn × 0.85
+                "revenue_bn"   : 13.3,       # approx €15.6bn × 0.85
+                "profit_m"     : 884.0,      # approx €1.04bn × 0.85
                 "profit_label" : "Net Operating Result",
                 "cor_pct"      : 94.1,
                 "solvency_pct" : 218.0,
@@ -222,6 +266,17 @@ COMPANIES = [
         "currency" : "GBP",
         "color"    : "#6A0572",
         "history"  : [
+            {
+                "year"         : "FY2025",
+                "revenue_bn"   : 0.203,
+                "profit_m"     : 51.0,
+                "profit_label" : "Profit Before Tax",
+                "cor_pct"      : 82.3,
+                "solvency_pct" : 154.0,
+                "source_url"   : "https://sabreplc.co.uk/media/hzekr0o1/2025_sabre_insurance_group_plc_rns.pdf",
+                "source_label" : "Sabre FY2025 RNS Results — 10 Mar 2026",
+                "results_date" : "10 Mar 2026",
+            },
             {
                 "year"         : "FY2024",
                 "revenue_bn"   : 0.236,
