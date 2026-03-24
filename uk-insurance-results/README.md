@@ -1,6 +1,5 @@
 # GB UK Insurance Group - FY Results Dashboard
-
-An dashboard built for tracking FY2022–FY2024 financial results for five major UK insurance groups.
+A dashboard built for tracking FY2022–FY2025 financial results for five major UK insurance groups.
 
 **Live app →** *(https://pranavbalguriappio-5dpim4qvrt8jnzwf8trdxh.streamlit.app/)*
 
@@ -20,10 +19,10 @@ An dashboard built for tracking FY2022–FY2024 financial results for five major
 
 ## What the Dashboard Shows
 
-- **Snapshot tab** -> Latest year KPI cards, Revenue bar chart, COR comparison
-- **3-Year Trends tab** -> Revenue, Profit, and COR trend lines FY2022–FY2024
-- **Full Table tab** -> All figures in one place
-- **Sources tab** -> Every number linked to its official press release
+- **Snapshot tab** → Latest year KPI cards, Revenue bar chart, COR comparison
+- **Trends tab** → Revenue, Profit, and COR trend lines FY2022–FY2025
+- **Full Table tab** → All figures in one place
+- **Sources tab** → Every number linked to its official press release
 
 ---
 
