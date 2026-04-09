@@ -10,7 +10,7 @@ demonstrate strong SQL and data analysis skills.
 
 ## 🌐 Live Dashboard
 
-👉 **[View the live Streamlit dashboard](https://your-app.streamlit.app)**
+👉 **[View the live Streamlit dashboard](https://pranavbalguriappio-netflix-emea-finance.streamlit.app/)**
 
 ---
 
@@ -18,7 +18,7 @@ demonstrate strong SQL and data analysis skills.
 
 **SQL does the analysis. Python presents it.**
 
-All business logic lives in SQL — aggregations, window functions,
+All business logic lives in SQL - aggregations, window functions,
 YoY comparisons, variance analysis, and ranking. Python/Streamlit
 purely visualises the SQL results. This mirrors how production
 finance reporting works in practice at scale.
@@ -112,7 +112,7 @@ netflix-emea-finance/
 
 ## 📝 About the Data
 
-All data is synthetic — designed to mirror real production finance
+All data is synthetic designed to mirror real production finance
 reporting structures. Markets covered: UK, Germany, Spain, France,
 Italy. Productions are fictional but use realistic budget ranges
 and spend patterns for EMEA streaming productions.
