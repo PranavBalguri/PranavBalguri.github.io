@@ -1,0 +1,16 @@
+production_id,title,genre,country,market,budget_gbp,actual_spend_gbp,status,year,quarter
+P001,The Crown S6,Drama,United Kingdom,United Kingdom,45000000,43200000,completed,2024,Q1
+P002,Stranger Things S5,Sci-Fi,United Kingdom,United Kingdom,62000000,67500000,completed,2024,Q1
+P003,Dark Season 4,Thriller,Germany,Germany,18000000,16800000,completed,2024,Q2
+P004,Casa de Papel S6,Action,Spain,Spain,22000000,23400000,completed,2024,Q2
+P005,Lupin S4,Drama,France,France,15000000,14200000,completed,2024,Q3
+P006,Peaky Blinders Film,Drama,United Kingdom,United Kingdom,55000000,51000000,completed,2024,Q3
+P007,1899 S2,Mystery,Germany,Germany,24000000,26100000,in_production,2024,Q4
+P008,Suburra S4,Crime,Italy,Italy,12000000,11500000,completed,2024,Q4
+P009,The Witcher S4,Fantasy,United Kingdom,United Kingdom,80000000,78000000,in_production,2025,Q1
+P010,Barbarians S3,Historical,Germany,Germany,16000000,15200000,completed,2025,Q1
+P011,Elite S8,Drama,Spain,Spain,19000000,20800000,in_production,2025,Q2
+P012,Call My Agent S5,Comedy,France,France,11000000,10400000,completed,2025,Q2
+P013,Black Mirror S7,Sci-Fi,United Kingdom,United Kingdom,35000000,33000000,completed,2025,Q3
+P014,Babylon Berlin S5,Historical,Germany,Germany,28000000,29500000,in_production,2025,Q3
+P015,Money Heist Berlin S2,Crime,Spain,Spain,25000000,24100000,completed,2025,Q4
