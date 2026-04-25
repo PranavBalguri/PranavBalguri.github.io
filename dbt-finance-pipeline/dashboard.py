@@ -230,7 +230,7 @@ with tab2:
         if "LOW" in str(val):    return "background-color:#EAF3DE;color:#3B6D11;font-weight:bold"
         return ""
 
-    st.dataframe(fd.style.applymap(colour_risk, subset=["Risk Band","Risk Tier"]), use_container_width=True, hide_index=True)
+    st.dataframe(fd.style.map(colour_risk, subset=["Risk Band","Risk Tier"]), use_container_width=True, hide_index=True)
 
 # ── TAB 3: ACCOUNTS ───────────────────────────
 with tab3:
