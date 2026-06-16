@@ -1,0 +1,13 @@
+exception_id,security_id,exception_type,severity,description,detected_date,status,resolved_date,resolved_by,notes
+EX001,SEC009,Missing ISIN,High,Equity security has no ISIN code populated,2024-01-13,Open,,,Awaiting vendor confirmation
+EX002,SEC011,Missing Currency,High,Currency field is blank for AMZN,2024-01-15,Open,,,Cross-check with Bloomberg
+EX003,SEC020,Missing Identifiers,Critical,Security has no ISIN CUSIP or Ticker - unidentifiable,2024-01-15,Open,,,Cannot map to any external source
+EX004,SEC025,Invalid Currency,High,Currency code XXX is not a valid ISO 4217 code,2024-01-15,Open,,,Likely data entry error
+EX005,SEC015,Missing ISIN,Medium,Inactive bond missing ISIN - needed for audit trail,2024-01-12,Open,,,Low priority but required for records
+EX006,SEC010,Missing CUSIP,Low,CUSIP blank for Deutsche Bank bond - non-US so expected but flag for review,2024-01-10,Resolved,2024-01-11,Pranav B,Non-US instrument - CUSIP not applicable confirmed
+EX007,SEC014,Stale Price,Medium,BP PLC price not updated since 2023-12-20 - over 3 weeks old,2024-01-15,Open,,,Vendor feed may have dropped this security
+EX008,SEC022,Stale Price,Medium,Siemens AG Bond price last updated 2023-11-30 - over 6 weeks old,2024-01-15,Open,,,Check Bloomberg feed status
+EX009,SEC012,Missing CUSIP,Low,French OAT - non-US government bond CUSIP not expected but flagged per policy,2024-01-15,Resolved,2024-01-15,System,Non-US sovereign - CUSIP exemption applied
+EX010,SEC014,Stale Price,High,CA001 Apple stock split unprocessed - effective date approaching in 16 days,2024-01-13,Open,,,Needs ops team action before 2024-02-01
+EX011,SEC012,Corporate Action,Medium,CA014 Amazon dividend amount is zero - needs verification,2024-01-14,Open,,,Confirm if intentional or data error
+EX012,SEC009,Manual Source,Medium,Tesla data sourced manually not from Bloomberg - quality risk,2024-01-13,Open,,,Switch to automated feed
