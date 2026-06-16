@@ -1,1 +1,26 @@
-
+security_id,name,asset_class,isin,cusip,ticker,currency,exchange,country,sector,maturity_date,coupon_rate,par_value,status,last_updated,price,data_source
+SEC001,Apple Inc,Equity,US0378331005,037833100,AAPL,USD,NASDAQ,US,Technology,,,,Active,2024-01-15,185.20,Bloomberg
+SEC002,Microsoft Corporation,Equity,US5949181045,594918104,MSFT,USD,NASDAQ,US,Technology,,,,Active,2024-01-15,374.51,Bloomberg
+SEC003,Shell PLC,Equity,GB00BP6MXD84,,SHEL,GBP,LSE,GB,Energy,,,,Active,2024-01-15,2456.00,Bloomberg
+SEC004,Volkswagen AG,Equity,DE0007664039,,VOW3,EUR,XETRA,DE,Automotive,,,,Active,2024-01-14,114.30,Bloomberg
+SEC005,US Treasury 10Y,Bond,US912828YV68,912828YV6,,USD,OTC,US,Government,2033-08-15,3.875,1000,Active,2024-01-15,96.45,Bloomberg
+SEC006,UK Gilt 5Y,Bond,GB00BBJNQY21,,UKT,GBP,LSE,GB,Government,2028-07-31,4.250,100,Active,2024-01-15,98.12,Bloomberg
+SEC007,Toyota Motor Corp,Equity,JP3633400001,,7203,JPY,TSE,JP,Automotive,,,,Active,2024-01-15,2456.00,Bloomberg
+SEC008,Goldman Sachs Corp Bond,Bond,US38141GXZ52,38141GXZ5,,USD,OTC,US,Financial,2029-03-15,5.150,1000,Active,2024-01-15,101.23,Bloomberg
+SEC009,Tesla Inc,Equity,,TSLA123,TSLA,USD,NASDAQ,US,Technology,,,,Active,2024-01-13,218.89,Manual
+SEC010,Deutsche Bank AG Bond,Bond,DE000DB7XJU4,,,EUR,XETRA,DE,Financial,2027-06-30,3.750,1000,Active,2024-01-10,97.88,Bloomberg
+SEC011,Amazon.com Inc,Equity,US0231351067,023135106,AMZN,,NASDAQ,US,Technology,,,,Active,2024-01-15,153.42,Bloomberg
+SEC012,French OAT 10Y,Bond,FR0014002WS3,,OAT,EUR,Euronext,FR,Government,2032-05-25,0.500,100,Active,2024-01-15,82.34,Bloomberg
+SEC013,NVIDIA Corporation,Equity,US67066G1040,67066G104,NVDA,USD,NASDAQ,US,Technology,,,,Active,2024-01-15,495.22,Bloomberg
+SEC014,BP PLC,Equity,GB0007980591,,BP,GBP,LSE,GB,Energy,,,,Active,2023-12-20,498.75,Bloomberg
+SEC015,Barclays PLC Bond,Bond,,BARCBND01,,GBP,LSE,GB,Financial,2026-09-15,4.000,100,Inactive,2024-01-12,99.10,Manual
+SEC016,Sony Group Corp,Equity,JP3435000009,,6758,JPY,TSE,JP,Technology,,,,Active,2024-01-15,12450.00,Bloomberg
+SEC017,Italian BTP 10Y,Bond,IT0005436693,,BTP,EUR,MTS,IT,Government,2031-12-01,0.950,100,Active,2024-01-15,84.22,Bloomberg
+SEC018,Meta Platforms Inc,Equity,US30303M1027,30303M102,META,USD,NASDAQ,US,Technology,,,,Active,2024-01-15,374.20,Bloomberg
+SEC019,HSBC Holdings PLC,Equity,GB0005405286,,HSBA,GBP,LSE,GB,Financial,,,,Active,2024-01-15,608.30,Bloomberg
+SEC020,Unknown Security XYZ,Equity,,,,USD,,,,,,,Active,2024-01-15,45.00,Manual
+SEC021,Alphabet Inc Class A,Equity,US02079K3059,02079K305,GOOGL,USD,NASDAQ,US,Technology,,,,Active,2024-01-15,140.93,Bloomberg
+SEC022,Siemens AG Bond,Bond,DE000A2LQLH1,,,EUR,XETRA,DE,Industrial,2028-02-14,1.250,1000,Active,2023-11-30,91.45,Bloomberg
+SEC023,JPMorgan Chase Corp Bond,Bond,US46625HRL53,46625HRL5,,USD,OTC,US,Financial,2030-01-23,4.800,1000,Active,2024-01-15,99.87,Bloomberg
+SEC024,Nestle SA,Equity,CH0012221716,,NESN,CHF,SIX,CH,Consumer Staples,,,,Active,2024-01-15,98.42,Bloomberg
+SEC025,Invalid Currency Test,Equity,GB0000000001,,TEST,XXX,LSE,GB,Financial,,,,Active,2024-01-15,10.00,Manual
